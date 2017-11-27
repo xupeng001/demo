@@ -1,0 +1,14 @@
+.project
+.gitignore.swp
+*.gitignore
+*.classpath
+*.prefs
+*.core.xml
+*.name
+*.container
+*.component
+*.jsdtscope
+*.MF
+*.class
+/target
+pom.xml
