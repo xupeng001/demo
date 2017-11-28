@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache, must-revalidate" />
+<meta http-equiv="expires" content="0" />
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"
+	type="text/javascript"></script>
+
+<script type="text/javascript">
+// 	$(function(){
+// 		$("#send").click({
+// 			 $.get("/login", function(result){
+// 				 Window.location.href=result.backUrl
+// 			});
+// 		});
+// 	});
+	
+	
+	function send(){
+		 $.get("/login.json", function(result){
+			 var data=JSON.parse(result);
+			 console.log(data);
+			 console.log(data.backUrl);
+			 window.location.href=data.backUrl;
+		});
+	}
+</script>
+
+<title>SSO</title>
+</head>
+<body>
+	<button id="send" onclick="send()">login</button>
+</body>
+</html>

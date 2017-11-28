@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: didispace
+##    name: spring-cloud-config-client
+  cloud:
+    config:
+      uri: http://localhost:7001/
+      profile: prod
+##      profile: spring-cloud-config-client
+      label: master
+server:
+  port: 2001
